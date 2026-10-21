@@ -1,41 +1,53 @@
-# Landing Page Pessoal
+# dcmacedo.com.br
 
-Bem-vindo ao meu repositório de Landing Page Pessoal! Esta é a página onde compartilho meus projetos e habilidades profissionais, proporcionando uma visão abrangente do meu perfil. Desenvolvida com as tecnologias HTML, CSS e JavaScript, esta landing page reflete meu compromisso com a apresentação visualmente atraente e funcional.
+Landing page profissional construída com Next.js App Router, React, TypeScript e CSS próprio. O site não depende de banco de dados nem de variáveis de ambiente para executar.
 
-## Conteúdo
+## Requisitos
 
-- **Sobre Mim:** Uma breve introdução sobre quem eu sou, minha formação e minha paixão por desenvolvimento.
+- Node.js 20.9 ou superior
+- npm
+- Git (opcional, recomendado para versionamento)
 
-- **Projetos Destacados:** Destaque dos projetos mais relevantes que demonstrem minhas habilidades e conquistas.
-
-- **Competências Profissionais:** Uma lista detalhada das habilidades técnicas e profissionais que possuo.
-
-- **Contato:** Informações de contato para facilitar a comunicação.
-
-## Tecnologias Utilizadas
-
-- **HTML:** A estrutura básica da página.
-
-- **CSS:** Estilização para uma apresentação visualmente atraente.
-
-- **JavaScript:** Adição de interatividade e dinamismo à página.
-
-## Como Visualizar
-
-1. Clone o repositório para sua máquina local:
+## Executar localmente
 
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+npm install
+npm run dev
 ```
 
-2. Abra o arquivo `index.html` em seu navegador.
+Abra http://localhost:3000.
 
-## Personalização
+## Validar antes de publicar
 
-Sinta-se à vontade para clonar este repositório e personalizar a Landing Page de acordo com suas próprias informações e estilo. Use como uma base para destacar suas conquistas e projetos.
+```bash
+npm run lint
+npm run build
+npm run start
+```
 
-## Contribuições
+Depois do build, `npm run start` serve a versão de produção em http://localhost:3000.
 
-Se você identificar melhorias ou tiver sugestões, fique à vontade para abrir uma issue ou enviar um pull request. Contribuições são sempre bem-vindas!
+## Personalizações prioritárias
 
-Espero que esta Landing Page ajude a apresentar quem eu sou e o que faço de forma clara e impactante. Obrigado por visitar!
+1. Revise o texto de apresentação em `src/app/page.tsx` para refletir sua experiência real.
+2. Confirme se `contato@dcmacedo.com.br` será o endereço público. O botão de contato abre o aplicativo de email, mas o endereço precisa existir para receber mensagens.
+3. Atualize título, descrição e URL canônica em `src/app/layout.tsx` caso altere o domínio principal.
+4. A fonte Manrope e a fonte DM Mono são carregadas do Google Fonts. O site mantém fontes de fallback se o serviço não estiver acessível.
+
+## Publicação sugerida: Vercel
+
+1. Crie um repositório Git e envie este projeto.
+2. Importe o repositório no painel da Vercel.
+3. Mantenha as configurações padrão de build do Next.js.
+4. Adicione `dcmacedo.com.br` e, se desejar, `www.dcmacedo.com.br` nas configurações de domínio do projeto.
+5. Configure no provedor onde o domínio foi comprado os registros DNS exatamente conforme os valores indicados pela Vercel.
+6. Aguarde a validação do DNS e a emissão do certificado HTTPS.
+7. Teste o domínio raiz, a versão `www` se configurada, `/robots.txt` e `/sitemap.xml`.
+
+Não altere os registros de email existentes no DNS sem confirmar a configuração atual, pois isso pode interromper o recebimento de mensagens.
+
+## Observações
+
+- Não há formulário de contato backend nesta versão. O contato usa `mailto:`.
+- Não há analytics, cookies de rastreamento ou integrações externas de negócio.
+- O conteúdo é uma primeira proposta editorial e deve ser revisado antes da publicação para garantir que as descrições representem corretamente a experiência e os serviços oferecidos.
