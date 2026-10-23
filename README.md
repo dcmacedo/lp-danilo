@@ -51,3 +51,8 @@ Não altere os registros de email existentes no DNS sem confirmar a configuraç�
 - Não há formulário de contato backend nesta versão. O contato usa `mailto:`.
 - Não há analytics, cookies de rastreamento ou integrações externas de negócio.
 - O conteúdo é uma primeira proposta editorial e deve ser revisado antes da publicação para garantir que as descrições representem corretamente a experiência e os serviços oferecidos.
+
+## Sites para analisar
+- https://lympdesign.com/
+- https://www.next4.com.br/
+- https://www.agenciafante.com.br/
